@@ -1,6 +1,6 @@
 {
   "name": "suivi-poste",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Suivre les envois postaux",
   "license": "MIT",
   "repository": "rigwild/suivi-poste-cli",
@@ -9,8 +9,10 @@
     "email": "me@rigwild.dev",
     "url": "https://rigwild.dev/"
   },
+  "main": "dist/index.js",
   "files": [
-    "index.js"
+    "dist/index.ts",
+    "dist/index.d.ts"
   ],
   "keywords": [
     "suivi-poste",
@@ -20,7 +22,14 @@
     "colissimo",
     "courrier"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
     "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "typescript": "^3.8.3"
   }
 }
