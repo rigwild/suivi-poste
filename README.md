@@ -1,4 +1,6 @@
 # suivi-poste
+[![npm badge](https://img.shields.io/npm/v/suivi-poste.svg?logo=npm)](https://www.npmjs.com/package/suivi-poste)
+
 > Suivre les envois postaux
 
 La Poste fourni en Open Data une [API de suivi postal](https://developer.laposte.fr/products/suivi/latest). Ce module permet de consommer cette API.
@@ -15,18 +17,29 @@ Il faut s'inscrire sur le portail [developer.laposte.fr](https://developer.lapos
 Documentation des réponses d'API : https://developer.laposte.fr/products/suivi/latest
 
 ## Installation
-```sh
-$ yarn add suivi-poste # or npm i suivi-poste
+```
+$ yarn add suivi-poste
 ```
 
 ## Usage
-```js
-import suiviPoste from 'suivi-poste'
+```ts
+import { suiviPosteApi } from 'suivi-poste'
 
-const suiviPostApi = suiviPoste.api('my-api-key')
+const suiviPoste = suiviPosteApi({ token: 'my-api-key' })
 
-const result = await suiviPostApi.getTracking('6A15602676300', 'A00000001', '6A15602683841')
+const result = await suiviPoste.getTracking('6A15602676300', 'A00000001', '6A15602683841')
 console.log(result)
+
+/* =>
+{ lang: 'fr_FR',
+  scope: 'open',
+  returnCode: 200,
+  shipment:
+   { idShip: '6A15602676300',
+     holder: 4,
+     product: 'colissimo',
+...
+*/
 ```
 
 ## Related

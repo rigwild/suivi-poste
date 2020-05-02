@@ -14,10 +14,10 @@ export declare interface SuiviPosteOptions {
  *
  * Get an API key at https://developer.laposte.fr/products/suivi/latest
  */
-export const api = ({
+export const suiviPosteApi = ({
   token,
   uri = 'https://api.laposte.fr/suivi/v2/idships',
-  userAgent = `github.com/rigwild/suivi-poste v${require('./package.json').version}`
+  userAgent = `github.com/rigwild/suivi-poste v0.1.2`
 }: SuiviPosteOptions) => ({
   /**
    * Load shipments tracking data
