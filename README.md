@@ -44,7 +44,7 @@ console.log(result)
 
 ## Related
  - [suivi-poste-cli](https://github.com/rigwild/suivi-poste-cli) - CLI pour ce module
- - [suivi-poste-proxy](https://gist.github.com/rigwild/c88e5a85fb1f1365cecbbe597dd5dcca) - Serveur proxy pour ce module
+ - [suivi-poste-proxy](https://github.com/rigwild/suivi-poste-proxy) - Serveur proxy pour ce module
 
 ## License
 [The MIT license](./LICENSE)
